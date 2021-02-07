@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blogging/create_post.dart';
 
 class YourBlogs extends StatefulWidget {
   @override
@@ -115,7 +116,11 @@ class _YourBlogsState extends State<YourBlogs> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return CreatePost();
+            }));
+          },
           backgroundColor: Colors.black45,
           child: Icon(Icons.add),
         ));
