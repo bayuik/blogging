@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blogging/your_blogs.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({
@@ -108,7 +109,12 @@ class SignUp extends StatelessWidget {
                           minWidth: 340,
                           shape: RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(50)),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return YourBlogs();
+                            }));
+                          },
                           child: Text(
                             'Sign Up',
                             style: TextStyle(color: Colors.blue),
